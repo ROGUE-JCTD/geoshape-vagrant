@@ -1,7 +1,7 @@
 ```bash
 vagrant up
 vagrant ssh
-geoshape-config init 192.168.99.110
+sudo geoshape-config init 192.168.99.110
 ```
 
 The vm will be configured and accessible in a browser at the following url: 192.168.99.110
@@ -10,7 +10,6 @@ The vm will be configured and accessible in a browser at the following url: 192.
 sudo geoshape-config
 Usage:
         geoshape-config database
-        geoshape-config init
         geoshape-config selinux
         geoshape-config updateip <public ip or domain>
         geoshape-config updatelayers
@@ -22,11 +21,16 @@ Usage:
         geoshape-config shell
         geoshape-config dbshell
         geoshape-config start_all
-        Details: restarts all GeoSHAPE services
+            restarts all GeoSHAPE services
         geoshape-config stop_all
-        Details: stops all GeoSHAPE services
+            stops all GeoSHAPE services
         geoshape-config init <ip or domain>
-        Details: chains together database, django, updateip,
-        collectstatic, syncdb, selinux, start_all,
-        updatelayers, rebuildindex and createsuperuser
+            chains together ssl, database, django, updateip,
+            collectstatic, syncdb, selinux, start_all,
+            updatelayers, rebuildindex and createsuperuser
+        geoshape-config maploom_dev
+            modify geonode to point to the a build of maploom
+            on the host machine to speedup the edit-build-test
+            cycle of maploom
+        geoshape-config ssl <public ip or domain>
 ```
