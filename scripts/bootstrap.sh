@@ -4,4 +4,4 @@
 set -e
 cd /etc/yum.repos.d/
 wget  https://yum.boundlessps.com/geoshape.repo
-yum -y install geoshape geoshape-geoserver elasticsearch postgis-postgresql95
+yum -y install geoshape geoshape-geoserver elasticsearch postgis-postgresql95 rabbitmq-server-3.6.1
